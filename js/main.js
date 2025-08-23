@@ -76,5 +76,91 @@ const wraper = document.getElementById("wraper");
     updateSlider();
   });
 
-  window.addEventListener("resize", updateSlider);
-  updateSlider();
+  window.addEventListener("resize", () => {
+    updateSlider();
+    gelaryUi("all");
+  });
+updateSlider();
+  
+
+// gelary
+
+const gelary = [
+  {
+    id: 1,
+    category: "app",
+    img: "./assets/app.jpg",
+    title: "App",
+    titleAR: "تطبيق",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    textAR: "لوريم ايبسوم دولار سيت أميت",
+  },
+  {
+    id: 2,
+    category: "Web",
+    img: "./assets/website.jpg",
+    title: "Website",
+    titleAR: "موقع ويب",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    textAR: "لوريم ايبسوم دولار سيت أميت",
+    tags: ["HTML", "Css", "Js"]
+  },
+  {
+    id: 3,
+    category: "software",
+    img: "./assets/software.jpg",
+    title: "Software",
+    titleAR: "برنامج",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    textAR: "لوريم ايبسوم دولار سيت أميت",
+  }
+]
+
+function gelaryUi(category) {
+  let gelaryDom = document.getElementById("gelaryDom");
+  let gelaryItems=[]
+  if (category == "all") {
+    gelaryItems = gelary
+  }else{
+    
+    gelaryItems = gelary.filter((item) => item.category === category);
+  }
+
+  console.log(gelaryItems);
+  
+  gelaryDom.innerHTML = `
+  ${gelaryItems.map((item,i) => {
+    return `
+    <div class="${`flex-1 md:max-w-[50%] lg:max-w-[33.33%]  opacity-80 hover:opacity-100 hover:scale-110 transition duration-400  ${window.innerWidth < 768 && i < 2 ? "text-[#FF8C00]" : "text-white"}`}">
+    
+            <img src="${item.img}" alt="labtop image" class="w-full object-cover object-center rounded-2xl h-[400px]">
+            <h3 class="font-bold text-4xl mt-4">${lang == "EN" ? item.title : item.titleAR}</h3>
+            <p class="text-lg font-light mt-3">${lang == "EN" ? item.text : item.textAR}</p>
+            <div class="flex gap-2 items-center mt-4">
+            ${item.tags ? item.tags.map((tag) => {
+              return `
+              <span class="block px-4 py-3 border border-white rounded-2xl text-white">${tag}</span>
+              `
+            }).join("") : ""}
+            </div>
+        </div>
+
+    `
+  }).join("")}
+  `
+}
+
+gelaryUi("all")
+
+const categoryBtnS=document.querySelectorAll("#gelaryCategory span")
+categoryBtnS.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    gelaryUi(btn.getAttribute("category"))
+    e.target.classList.add("text-[#FF8C00]")
+    categoryBtnS.forEach((btn) => {
+      if (btn !== e.target) {
+        btn.classList.remove("text-[#FF8C00]")
+      }
+    })
+  })
+})
