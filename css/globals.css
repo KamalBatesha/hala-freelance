@@ -1,0 +1,10 @@
+*{
+    font-family: "Roboto", sans-serif;
+}
+/* hero section */
+#hero > div{
+    background-image: url("../assets/desktop-3-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <title>desktop-3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+            integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="description"
+        content="Professional front-end developer portfolio showcasing web design, development skills, and experience." />
+    <link rel="stylesheet" href="./css/globals.css" />
+    <!-- <link rel="stylesheet" href="styleguide.css" /> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        /** @type {import('tailwindcss').Config} */
+        // tailwind.config = {
+        //     theme: {
+        //         extend: {
+        //             colors: {
+        //                 bg: "var(--bg)",
+        //                 dark: "var(--dark)",
+        //                 primary: "var(--primary)",
+        //                 "text-1": "var(--text-1)",
+        //                 "text-2": "var(--text-2)",
+        //                 third: "var(--third)",
+        //             },
+        //             fontFamily: {
+        //                 button: "var(--button-font-family)",
+        //                 h1: "var(--h1-font-family)",
+        //                 h2: "var(--h2-font-family)",
+        //                 h3: "var(--h3-font-family)",
+        //                 "small-text": "var(--small-text-font-family)",
+        //                 subtitle: "var(--subtitle-font-family)",
+        //             },
+        //         },
+        //     },
+        //     plugins: [],
+        // };
+    </script>
+</head>
+
+
+
+<body class="overflow-x-hidden">
+    <nav class="flex items-center justify-between w-full py-9 px-20 overflow-hidden">
+        <a href="index.html" class=""><img src="logos/noBgBlack.png" alt="logo" class="w-[104px]" /></a>
+        <ul class="flex items-center gap-9">
+            <li><a class="font-semibold text-lg" href="index.html">Home</a></li>
+            <li><a class="font-semibold text-lg" href="#">About</a></li>
+            <li><a class="font-semibold text-lg" href="#">Our Services</a></li>
+            <li><a class="font-semibold text-lg" href="#">Our Team</a></li>
+            <li><a class="font-semibold text-lg" href="#">Testimonial</a></li>
+            <li class="flex items-center">
+                <button class="text-lg text-white bg-[#FF8C00] rounded-lg py-2 px-5 mr-2">Request Quote</button>
+                <div class="flex items-center justify-center bg-white">
+                    <!-- Language Toggle -->
+                    <button id="langToggle" class="flex items-center rounded-full bg-orange-100 p-2 transition">
+                        <!-- EN (default active) -->
+                        <span id="enBtn"
+                            class="flex h-6 w-8 items-center justify-center rounded-full bg-orange-500 text-white font-semibold transition">
+                            EN
+                        </span>
+                        <!-- AR (inactive) -->
+                        <span id="arBtn"
+                        class="flex h-6 w-8 items-center justify-center rounded-full text-orange-500 font-semibold transition">
+                        AR
+                        </span>
+                    </button>
+                </div>
+            </li>
+        </ul>
+    
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="hero" class="h-[calc(100vh-110px)]  lg:px-16 md:px-10 px-0 ">
+        <div class="flex items-center justify-center w-full h-full rounded-2xl">
+            <div class="text-center flex flex-col justify-start items-center w-full md:px-20 px-10 gap-10">
+                <p class="font-bold lg:text-5xl text-4xl  text-white">From Vision to <span
+                    class="text-[#FF8C00]">Code</span> , We Build What Matters</p>
+                    <div class="flex items-center justify-center w-full gap-10">
+                        <img class="md:w-[35%] w-[45%]" src="./assets/heroText-1.png" alt="hala">
+                    <img class="md:w-[35%] w-[45%]" src="./assets/heroText-2.png" alt="teem">
+                </div>
+                <div class="flex justify-center items-center gap-6 w-full">
+                    <button class="md:text-lg text-md text-white bg-[#FF8C00] rounded-lg py-2 px-5 mr-2">Request Quote</button>
+                    <button
+                        class="md:text-lg text-md text-white border border-white hover:bg-[#FF8C00] hover:border-[#FF8C00] transition duration-400 rounded-lg py-2 px-5 mr-2">Contact
+                        Us</button>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about section -->
+     <section id="about" class="flex lg:flex-row flex-col-reverse gap-10  justify-center lg:px-28 md:px-20 px-8 py-24 relative ">
+        <div class="flex-1">
+            <img src="./assets/Group 3.png" alt="about hala" class="w-full">
+        </div>
+        <div class="flex-1 flex flex-col gap-14 py-7">
+                <div class="flex gap-4 items-center">
+                    
+                    <img src="./assets/icon-1.png" alt="about hala" class="w-8">
+                    <h3 class="text-[#010F36]">About Us</h3>
+                </div>
+                <p class="text-5xl font-semibold leading-[140%]">Transforming Idea<br/>
+                Into <span class="text-[#FF8C00]">Digital Reality</span></p>
+                <p class="text-2xl font-medium text-[#64748B]">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam...</p>
+                <div class="flex items-center justify-between text-center">
+                    <div class="flex flex-col justify-center items-center bg-[#FF8C004D] text-[#FF8C00] gap-2 xl:px-10 sm:px-10 md:px-4 p-3 py-7 rounded-3xl">
+                        <span class="font-bold text-3xl">+10</span>
+                        <span class="text-sm font-semibold">Team Member</span>
+                    </div>
+                    <div class="flex flex-col justify-center items-center bg-[#FF8C00] text-white gap-2 xl:px-10 sm:px-10 md:px-4 p-3 py-7 rounded-3xl">
+                        <span class="font-bold text-3xl">+10</span>
+                        <span class="text-sm font-semibold">Team Member</span>
+                    </div>
+                    <div class="flex flex-col justify-center items-center bg-[#FF8C00] text-white gap-2 xl:px-10 sm:px-10 md:px-4 p-3 py-7 rounded-3xl">
+                        <span class="font-bold text-3xl">+10</span>
+                        <span class="text-sm font-semibold">Team Member</span>
+                    </div>
+
+                </div>
+        </div>
+        <img src="./assets/rounded-arrow-black.png" alt="rounded arrow" class="absolute right-[15%] top-0">
+        <img src="./assets/orange-dots.png" alt="orange dots" class="absolute left-[15%] bottom-0 translate-y-1/2">
+     </section>
+     
+     <!-- services section -->
+    <section class="bg-[#FF8C004D] py-28 lg:px-28 md:px-20 px-8">
+        <div class="flex justify-center items-center ">
+            <img src="./assets/icon-1.png" alt="square icon" class="w-8"/>
+            <h3 class="text-3xl text-[#010F36] ml-4">Explore Our Service</h3>
+        </div>
+        <p class="font-semibold text-4xl text-[#64748B] text-center mt-8">we Offer a Wide Variety of IT Services</p>
+
+        <div class="lg:px-20 md:px-14 px-8">
+
+            <div id="slider" class="w-full pt-16 overflow-x-hidden mt-6">
+                <div id="wraper" class="relative flex left-0 w-full transation duration-500">
+                    <div class="px-4 lg:w-1/3 md:w-1/2 w-full shrink-0">
+
+                        <div class="w-full p-9 pt-16 bg-white relative rounded-3xl h-full">
+                            <h3 class="text-[#FF8C00] text-3xl font-bold py-5">Web Design</h3>
+                        <p class="text-[#010F36] mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua.</p>
+
+                            <div class="flex lg:flex-col xl:flex-row sm:flex-row flex-col justify-start gap-3 items-start text-[#64748B] mt-auto">
+                            <div class="flex items-center gap-4 mr-6"><i class="fa-solid fa-clock"></i> <span class="">20 Days</span></div>
+                            <div class="flex items-center gap-4"><i class="fa-solid fa-ticket"></i> <span class="">200$</span></div>
+                        </div>
+                        <div class="flex items-center justify-center p-6 aspect-square rounded-full bg-[#FF8C00] left-7 top-0 absolute -translate-y-1/2 text-white">
+                            <i class="fa-solid fa-globe text-4xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-4 lg:w-1/3 md:w-1/2 w-full shrink-0">
+                
+                    <div class="w-full p-9 pt-16 bg-white relative rounded-3xl h-full">
+                        <h3 class="text-[#FF8C00] text-3xl font-bold py-5">Mobile app Development</h3>
+                        <p class="text-[#010F36] mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna
+                            aliqua.</p>
+                
+                        <div class="flex lg:flex-col xl:flex-row sm:flex-row flex-col justify-start gap-3 items-start text-[#64748B] mt-auto">
+                            <div class="flex items-center gap-4 mr-6"><i class="fa-solid fa-clock"></i> <span class="">20 Days</span>
+                            </div>
+                            <div class="flex items-center gap-4"><i class="fa-solid fa-ticket"></i> <span class="">200$</span></div>
+                        </div>
+                        <div
+                            class="flex items-center justify-center p-6 aspect-square rounded-full bg-[#FF8C00] left-7 top-0 absolute -translate-y-1/2 text-white">
+                            <i class="fas fa-mobile-button text-4xl"></i>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="px-4 lg:w-1/3 md:w-1/2 w-full shrink-0">
+                
+                    <div class="w-full p-9 pt-16 bg-white relative rounded-3xl h-full">
+                        <h3 class="text-[#FF8C00] text-3xl font-bold py-5">System Development</h3>
+                        <p class="text-[#010F36] mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna
+                            aliqua.</p>
+                
+                        <div class="flex lg:flex-col xl:flex-row sm:flex-row flex-col justify-start gap-3 items-start text-[#64748B] mt-auto">
+                            <div class="flex items-center gap-4 mr-6"><i class="fa-solid fa-clock"></i> <span class="">20 Days</span>
+                            </div>
+                            <div class="flex items-center gap-4"><i class="fa-solid fa-ticket"></i> <span class="">200$</span></div>
+                        </div>
+                        <div
+                            class="flex items-center justify-center p-6 aspect-square rounded-full bg-[#FF8C00] left-7 top-0 absolute -translate-y-1/2 text-white">
+                            <i class="fas fa-desktop text-4xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-4 lg:w-1/3 md:w-1/2 w-full shrink-0">
+                
+                    <div class="w-full p-9 pt-16 bg-white relative rounded-3xl h-full">
+                        <h3 class="text-[#FF8C00] text-3xl font-bold py-5">Web Design</h3>
+                        <p class="text-[#010F36] mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna
+                            aliqua.</p>
+                
+                        <div
+                            class="flex lg:flex-col xl:flex-row sm:flex-row flex-col justify-start gap-3 items-start text-[#64748B] mt-auto">
+                            <div class="flex items-center gap-4 mr-6"><i class="fa-solid fa-clock"></i> <span class="">20 Days</span>
+                            </div>
+                            <div class="flex items-center gap-4"><i class="fa-solid fa-ticket"></i> <span class="">200$</span></div>
+                        </div>
+                        <div
+                            class="flex items-center justify-center p-6 aspect-square rounded-full bg-[#FF8C00] left-7 top-0 absolute -translate-y-1/2 text-white">
+                            <i class="fa-solid fa-globe text-4xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-4 lg:w-1/3 md:w-1/2 w-full shrink-0">
+                
+                    <div class="w-full p-9 pt-16 bg-white relative rounded-3xl h-full">
+                        <h3 class="text-[#FF8C00] text-3xl font-bold py-5">Mobile app Development</h3>
+                        <p class="text-[#010F36] mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna
+                            aliqua.</p>
+                
+                        <div
+                            class="flex lg:flex-col xl:flex-row sm:flex-row flex-col justify-start gap-3 items-start text-[#64748B] mt-auto">
+                            <div class="flex items-center gap-4 mr-6"><i class="fa-solid fa-clock"></i> <span class="">20 Days</span>
+                            </div>
+                            <div class="flex items-center gap-4"><i class="fa-solid fa-ticket"></i> <span class="">200$</span></div>
+                        </div>
+                        <div
+                            class="flex items-center justify-center p-6 aspect-square rounded-full bg-[#FF8C00] left-7 top-0 absolute -translate-y-1/2 text-white">
+                            <i class="fas fa-mobile-button text-4xl"></i>
+                        </div>
+                
+                    </div>
+                </div>
+                <div class="px-4 lg:w-1/3 md:w-1/2 w-full shrink-0">
+                
+                    <div class="w-full p-9 pt-16 bg-white relative rounded-3xl h-full">
+                        <h3 class="text-[#FF8C00] text-3xl font-bold py-5">System Development</h3>
+                        <p class="text-[#010F36] mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna
+                            aliqua.</p>
+                
+                        <div
+                            class="flex lg:flex-col xl:flex-row sm:flex-row flex-col justify-start gap-3 items-start text-[#64748B] mt-auto">
+                            <div class="flex items-center gap-4 mr-6"><i class="fa-solid fa-clock"></i> <span class="">20 Days</span>
+                            </div>
+                            <div class="flex items-center gap-4"><i class="fa-solid fa-ticket"></i> <span class="">200$</span></div>
+                        </div>
+                        <div
+                            class="flex items-center justify-center p-6 aspect-square rounded-full bg-[#FF8C00] left-7 top-0 absolute -translate-y-1/2 text-white">
+                            <i class="fas fa-desktop text-4xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-4 lg:w-1/3 md:w-1/2 w-full shrink-0">
+                
+                    <div class="w-full p-9 pt-16 bg-white relative rounded-3xl h-full">
+                        <h3 class="text-[#FF8C00] text-3xl font-bold py-5">Web Design</h3>
+                        <p class="text-[#010F36] mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna
+                            aliqua.</p>
+                
+                        <div
+                            class="flex lg:flex-col xl:flex-row sm:flex-row flex-col justify-start gap-3 items-start text-[#64748B] mt-auto">
+                            <div class="flex items-center gap-4 mr-6"><i class="fa-solid fa-clock"></i> <span class="">20 Days</span>
+                            </div>
+                            <div class="flex items-center gap-4"><i class="fa-solid fa-ticket"></i> <span class="">200$</span></div>
+                        </div>
+                        <div
+                            class="flex items-center justify-center p-6 aspect-square rounded-full bg-[#FF8C00] left-7 top-0 absolute -translate-y-1/2 text-white">
+                            <i class="fa-solid fa-globe text-4xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="px-4 lg:w-1/3 md:w-1/2 w-full shrink-0">
+                
+                    <div class="w-full p-9 pt-16 bg-white relative rounded-3xl h-full">
+                        <h3 class="text-[#FF8C00] text-3xl font-bold py-5">Mobile app Development</h3>
+                        <p class="text-[#010F36] mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna
+                            aliqua.</p>
+                
+                        <div
+                            class="flex lg:flex-col xl:flex-row sm:flex-row flex-col justify-start gap-3 items-start text-[#64748B] mt-auto">
+                            <div class="flex items-center gap-4 mr-6"><i class="fa-solid fa-clock"></i> <span class="">20 Days</span>
+                            </div>
+                            <div class="flex items-center gap-4"><i class="fa-solid fa-ticket"></i> <span class="">200$</span></div>
+                        </div>
+                        <div
+                            class="flex items-center justify-center p-6 aspect-square rounded-full bg-[#FF8C00] left-7 top-0 absolute -translate-y-1/2 text-white">
+                            <i class="fas fa-mobile-button text-4xl"></i>
+                        </div>
+                
+                    </div>
+                </div>
+                <div class="px-4 lg:w-1/3 md:w-1/2 w-full shrink-0">
+                
+                    <div class="w-full p-9 pt-16 bg-white relative rounded-3xl h-full">
+                        <h3 class="text-[#FF8C00] text-3xl font-bold py-5">System Development</h3>
+                        <p class="text-[#010F36] mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna
+                            aliqua.</p>
+                
+                        <div
+                            class="flex lg:flex-col xl:flex-row sm:flex-row flex-col justify-start gap-3 items-start text-[#64748B] mt-auto">
+                            <div class="flex items-center gap-4 mr-6"><i class="fa-solid fa-clock"></i> <span class="">20 Days</span>
+                            </div>
+                            <div class="flex items-center gap-4"><i class="fa-solid fa-ticket"></i> <span class="">200$</span></div>
+                        </div>
+                        <div
+                            class="flex items-center justify-center p-6 aspect-square rounded-full bg-[#FF8C00] left-7 top-0 absolute -translate-y-1/2 text-white">
+                            <i class="fas fa-desktop text-4xl"></i>
+                        </div>
+                    </div>
+                </div>
+                    
+                    
+                </div>
+                
+            </div>
+        </div>
+        <div class="flex md:flex-row-reverse flex-col-reverse md:justify-start justify-center items-center mt-8 relative">
+            <div class="flex gap-3 items-center text-[#64748B]">
+                <button id="prev" class="flex items-center justify-center rounded-xl bg-[#FF8C00] p-4 transition aspect-square">
+                    <i class="fa-solid fa-arrow-left text-white"></i>
+                </button>
+                <button id="next" class="flex items-center justify-center rounded-xl bg-[#FF8C00] p-4 transition aspect-square">
+                    <i class="fa-solid fa-arrow-right text-white"></i>
+                </button>
+            </div>
+            <div id="dots" class="flex md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2  gap-3 mb-8 md:mb-0"></div>
+
+        </div>
+    
+        
+    </section>
+    
+    <script src="./js/main.js"></script>
+    </body>
+    </html>

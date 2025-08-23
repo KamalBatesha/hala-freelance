@@ -1,0 +1,111 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto:var(--body-font-weight),var(--h3-font-weight),500,400,600,var(--button-font-weight),var(--h1-font-weight)|Poppins:500,600,var(--h2-font-weight)");
+
+/* Original CSS code should be injected here */
+
+/* Enhanced accessibility and interaction styles */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline-offset: 2px;
+}
+
+/* Improved button hover states */
+button:hover,
+a[role="button"]:hover {
+  transform: translateY(-1px);
+  transition: transform 0.2s ease;
+}
+
+/* Enhanced carousel controls */
+button[aria-label*="Previous"],
+button[aria-label*="Next"] {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button[aria-label*="Previous"]:hover,
+button[aria-label*="Next"]:hover {
+  transform: scale(1.05);
+}
+
+/* Tab navigation improvements */
+[role="tab"] {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+[role="tab"]:hover {
+  opacity: 0.8;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--primary);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* Improved form element styles */
+input,
+textarea,
+select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-color: var(--primary);
+}
+
+/* Enhanced responsive behavior */
+@media (max-width: 768px) {
+  .flex-col-mobile {
+    flex-direction: column;
+  }
+
+  .gap-mobile {
+    gap: 1rem;
+  }
+}
+
+/* Improved contrast for better accessibility */
+.text-contrast {
+  color: var(--text-1);
+  background-color: var(--bg);
+}
+
+/* Animation for smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced visual feedback for interactive elements */
+.interactive-element {
+  transition: all 0.2s ease;
+}
+
+.interactive-element:hover {
+  opacity: 0.9;
+}
+
+.interactive-element:active {
+  transform: scale(0.98);
+}

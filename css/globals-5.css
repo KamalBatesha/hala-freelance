@@ -1,0 +1,182 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Roboto:var(--subtitle-font-weight),700,600,var(--button-font-weight),var(--small-text-font-weight),var(--h3-font-weight),500,400,var(--h1-font-weight)|Poppins:500,700,600,var(--h2-font-weight)");
+
+/* Original CSS code should be injected here */
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0px;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+/* Enhanced focus styles for better accessibility */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Enhanced interactive states */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Improved accessibility for screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Make media responsive by default */
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent accidental horizontal scroll from absolutely-positioned decor */
+.no-x-overflow {
+  overflow-x: hidden;
+}
+
+/* Make any fixed 1440px containers full width everywhere (hero, sections) */
+[class*="w-[1440px]"] {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Avoid white gap caused by 100vw including scrollbar width */
+.w-screen {
+  width: 100% !important;
+}
+
+/* Ensure the top-level wrapper stretches full width */
+body > div.bg-white.grid.justify-items-center {
+  width: 100% !important;
+}
+
+/* ---- Responsive overrides for fixed-width utility classes ---- */
+@media (max-width: 1440px) {
+  /* Make any fixed 1440px-wide blocks fluid */
+  [class*="w-[1440px]"] {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 1280px) {
+  /* Scale 1200px containers to full width with side padding */
+  [class*="w-[1200px]"] {
+    width: calc(100% - 2rem) !important;
+    max-width: 1200px;
+    margin-left: 1rem !important;
+    margin-right: 1rem !important;
+  }
+  /* Normalize common absolute left offsets */
+  [class*="left-[120px]"] {
+    left: 1rem !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Stack and contain large blocks */
+  header,
+  section,
+  footer,
+  nav {
+    max-width: 100%;
+  }
+
+  /* Ensure absolute stripes/backgrounds don't overflow */
+  [class*="left-[432px]"] {
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+
+  /* Typography scale-down helpers */
+  h1 { font-size: clamp(28px, 6vw, 48px); }
+  h2 { font-size: clamp(22px, 4.5vw, 36px); }
+  h3 { font-size: clamp(18px, 3.8vw, 28px); }
+}
+
+@media (max-width: 768px) {
+  /* Compact paddings and gaps */
+  [class*="gap-10"] { gap: 1rem !important; }
+  [class*="px-10"] { padding-left: 1rem !important; padding-right: 1rem !important; }
+  [class*="px-8"] { padding-left: 1rem !important; padding-right: 1rem !important; }
+  [class*="p-8"] { padding: 1rem !important; }
+
+  /* Constrain very wide images/cards */
+  [class*="w-[589px]"],
+  [class*="w-[588px]"],
+  [class*="w-[581px]"] {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 640px) {
+  /* Reduce fixed heights to fit small screens better */
+  [class*="h-[1024px]"] { height: 75vh !important; }
+  [class*="h-[700px]"] { height: auto !important; }
+  [class*="h-[785px]"] { height: auto !important; }
+
+  /* Let absolutely-positioned sections breathe */
+  #about,
+  #skills,
+  #education,
+  #testimonial {
+    position: relative !important;
+    left: 0 !important;
+    width: 100% !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+/* Enhanced hover and focus states for interactive elements */
+button:hover,
+a:hover {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Ensure proper contrast for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
