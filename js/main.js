@@ -164,3 +164,104 @@ categoryBtnS.forEach((btn) => {
     })
   })
 })
+
+// testimonial
+const testimonials = [
+  {
+    id: 2,
+    name: "Mona",
+    role: "developer",
+    img: "./assets/person-2.jpg",
+    quote:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...1",
+    rate:4,
+    isActive:false
+  },
+  {
+    id: 1,
+    name: "Ahmed",
+    role: "team leader",
+    img: "./assets/person.jpg",
+    quote:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...2",
+    rate:5,
+    isActive:true
+  },
+  {
+    id: 3,
+    name: "aya",
+    role: "team leader",
+    img: "./assets/person-3.jpg",
+    quote:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...3",
+    rate:3,
+    isActive:false
+  }
+];
+
+function testimonialUi(testimonialsArr) {
+  const testimonialDom = document.getElementById("testimonialDom");
+  const activeTestimonial = testimonialsArr.find((t) => t.isActive);
+  testimonialDom.innerHTML = `
+  <div class="flex justify-center items-center gap-5">
+          ${testimonialsArr.map((t) => {
+            return `
+            <div
+            class="rounded-full cursor-pointer p-1 rounded-full ${t.isActive ? "w-[120px] h-[120px] bg-[#FF8C00]" : "w-[80px] h-[80px] bg-white"}"
+            onClick="handelTestimonial(${t.id})"
+          >
+            <img
+              src="${t.img}"
+              alt="person"
+              class="w-full h-full object-cover obeject-center rounded-full"
+            />
+          </div>
+            `
+          }).join("")}
+        </div>
+        <div class="text-center mt-6">
+          <p class="font-semibold text-xl text-[#010F36]">${activeTestimonial.name}</p>
+          <p class="text-[#64748B] mt-1">${activeTestimonial.role}</p>
+          <div class="flex justify-center items-center mt-2 gap-1">
+            ${Array.from({ length: activeTestimonial.rate }, (_, i) => {
+              return `
+              <i class="fa-solid fa-star text-[#FF8C00]"></i>
+              `
+            }).join("")}
+            ${Array.from({ length: 5 - activeTestimonial.rate }, (_, i) => {
+              return `
+              <i class="fa-regular fa-star text-[#FF8C00]"></i>
+              `
+            }).join("")}
+          </div>
+        </div>
+        <div class="relative text-center mt-10">
+          <p class="text-[#010F36] text-2xl">
+            ${activeTestimonial.quote}
+          </p>
+          <img
+            src="./assets/quote.png"
+            alt="quote"
+            class="absolute bottom-full right-full translate-y-1/2"
+          />
+          <img
+            src="./assets/quote.png"
+            alt="quote"
+            class="absolute left-full top-full rotate-180 -translate-y-1/2"
+          />
+        </div>
+  `
+
+}
+testimonialUi(testimonials)
+
+function handelTestimonial(id) {
+  const targetIndex = testimonials.findIndex((t) => t.id === id);
+
+  let [target] = testimonials.splice(targetIndex, 1);
+
+  let midIndex = Math.floor(testimonials.length / 2);
+  testimonials.splice(midIndex, 0, target);
+
+  testimonials.forEach((t) => t.isActive = false);
+  target.isActive = true;
+
+  testimonialUi(testimonials);
+}
